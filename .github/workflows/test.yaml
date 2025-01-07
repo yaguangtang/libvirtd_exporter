@@ -1,0 +1,12 @@
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Ansible Inventory Check
+        run:  echo "::error file=build.sh,line=1,col=5,endColumn=7,title=YOUR-TITLE::Missing semicolon"
